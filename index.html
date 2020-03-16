@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title></title>
+         <script src="javascript.js"></script> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table{
+                border:2px solid black;
+                    margin-left:auto; /* half of width */
+                    margin-right:auto;
+                    margin-top:100px;  /* half of height */
+                    top:50%;
+                    left:50%;
+                
+            }
+            img{
+                max-width: 25px;
+                display:block;
+                margin:auto;
+                
+            }
+            td{
+                text-align: center;
+            }
+            .deletebutton{
+                
+                background: url(delete.png) no-repeat;
+                float: left;
+                width: 40px;
+                height: 40px;
+                background-size: 40px 40px;
+            }
+            .increasebutton{
+                
+                background: url(increase.png) no-repeat;
+                float: left;
+                width: 40px;
+                height: 40px;
+                background-size: 40px 40px;
+                
+            }
+            .decreasebutton{
+                
+                background: url(decrease.png) no-repeat;
+                float: left;
+                width: 40px;
+                height: 40px;
+                background-size: 40px 40px;
+                
+            }
+            .rolling{
+                
+                    margin-left:auto; 
+                    margin-right:auto;
+                    margin-top:50px;
+                    top:50%;
+                    left:50%;
+                    display:block;
+                    visibility:hidden;
+                
+            }
+            
+            .reset{
+                
+                    margin-left:auto; 
+                    margin-right:auto;
+                    margin-top:50px;
+                    top:50%;
+                    left:50%;
+                    display:block;
+                    visibility:hidden;
+                
+            }
+            .starter{
+                
+                    margin-left:auto; 
+                    margin-right:auto;
+                    margin-top:50px;  
+                    top:50%;
+                    left:50%;
+                    display:block;
+                
+            }
+        </style>
+    </head>
+    <body>
+        
+        <button class="rolling" id="rolling" onclick="rolling();">ROLL THE DICE!</button>
+        <button class="reset" id="reset" onclick="resetTable();">Reset</button>
+       
+        <table>
+            
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Type
+                    </th>
+                    <th>
+                        Strength
+                    </th>
+                    <th>
+                        Health
+                    </th>
+                    <th>
+                        Special Power
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>            
+            </thead>
+            
+            <tbody id="table">
+                
+                
+            </tbody>
+            
+        </table>
+        <!-- the button allows us to load the javascript AFTER the table is created -->
+        <button class="starter" onclick="start();" id="starter">Start!</button>
+        
+    </body>
+</html>
